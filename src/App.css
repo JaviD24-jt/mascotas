@@ -1,38 +1,49 @@
-.App {
+:root{
+  --color_fondo_body:#f5f6f7ad;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html, 
+body {
+  font-size: 1.125em;
+  background-color: var(--color_fondo_body);
+}
+
+h1{
+  max-width: 58.75em;
+  font-size:  2.5em;
+  font-family: lato, sans-serif;
+  font-weight: 700;/*relleno de la letra*/
+  line-height: 1.1;
+  margin: 2.5em, 0; /*Margen superior-inferior, derecho-izquierdo*/
+}
+
+.app{
+  min-height: 100vh;/*Recordar que esto toma el 100% de la pantalla verticalmente*/
+  display: flex;
+  flex-wrap: wrap;/*Si  un elemento toma  el 100% del contenedor, toma la siguiente linea*/
+  align-items: center; /* Se aliean horizontalmente*/
+  justify-content: center;/* se  centran los elementos */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.contenedor_principal{
+  min-height: 37.5em;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 820px){
+  .h1{
+  font-size: 1em;
+  max-width: 20.75em;
+  font-weight: 200;
   }
-  to {
-    transform: rotate(360deg);
+  .contenedor_principal{
+    min-height: 15.5em;
   }
 }
